@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes, Router} from '@angular/router';
+import { RouterModule, Routes, Router } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,7 +13,7 @@ import { CommandPersoComponent } from './command-perso/command-perso.component';
 
 const routes: Routes = [
   { path: '', component: CommandComponent },
-  { path: 'CommandPerso', component: CommandPersoComponent }
+  { path: 'commandperso', component: CommandPersoComponent }
 ];
 
 @NgModule({
@@ -33,7 +33,7 @@ const routes: Routes = [
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    RouterModule,forRoot(routes)
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
