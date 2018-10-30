@@ -1,6 +1,6 @@
 <div>
   <h1>{{title}}</h1>
   <ng-container *ngFor="let menu of data">
-    <h2>{{menu.design}}</h2>
+    <h2 *ngIf="menu.artype=='S'">{{menu.design}}</h2>
   </ng-container>
 </div>
