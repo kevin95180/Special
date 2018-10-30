@@ -11,6 +11,8 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
 import { CommandComponent } from './command/command.component';
 import { CommandPersoComponent } from './command-perso/command-perso.component';
 
+import {HttpClientModule } from '@angular/common/http';
+
 const routes: Routes = [
   { path: '', component: CommandComponent },
   { path: 'commandperso', component: CommandPersoComponent }
@@ -33,7 +35,8 @@ const routes: Routes = [
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
