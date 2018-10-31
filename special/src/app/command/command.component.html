@@ -1,6 +1,47 @@
-<div>
-  <h1>{{title}}</h1>
-  <ng-container *ngFor="let menu of data">
-    <h2 *ngIf="menu.artype=='S'">{{menu.design}}</h2>
-  </ng-container>
-</div>
+<!--<div>-->
+<!--<h1>{{title}}</h1>-->
+<!--<ng-container *ngFor="let menu of data">-->
+<!--<h2 *ngIf="menu.artype=='S'">{{menu.design}}</h2>-->
+<!--</ng-container>-->
+<!--</div>-->
+
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Image</th>
+    <th>Name</th>
+    <!--<th>Price</th>-->
+    <!--<th>Quatity</th>-->
+    <!--<th>Action</th>-->
+  </tr>
+  </thead>
+  <tbody *ngFor="let menu of data">
+  <tr *ngIf="menu.artype=='B'"><!-- Sandiwch / B = burger -->
+    <td>{{menu.id}}</td>
+    <td><img src="{{menu.urlimg}}" class="img-thumbnail" style="height:100px;"/></td>
+    <td>{{menu.design}}</td>
+    <!--<td>{{list.product_price}}</td>-->
+    <!--<td>-->
+      <!--{{list.product_quality}}-->
+      <!--<button class="btn btn-success btn-xs plus" (click)="add()"><i-->
+        <!--class="glyphicon glyphicon-plus"></i></button>-->
+      <!--<button class="btn btn-danger btn-xs minus" (click)="del()"><i-->
+        <!--class="glyphicon glyphicon-minus"></i></button>-->
+    <!--</td>-->
+    <!--<td>-->
+      <!--<button class="btn btn-primary btn-sm" (click)="getpopup()">View</button> &nbsp;-->
+      <!--<button class="btn btn-danger btn-sm" (click)="delpopup()">Delete</button>-->
+    <!--</td>-->
+  </tr>
+  </tbody>
+  <tfoot>
+  <tr>
+    <td>Total Price</td>
+    <td colspan="6" class="text-right">Total</td>
+  </tr>
+  </tfoot>
+</table>
+
+<!--<app-productdetails [list]="selectedProduct"></app-productdetails>-->
+
